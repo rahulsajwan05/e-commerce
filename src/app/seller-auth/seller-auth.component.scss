@@ -15,7 +15,9 @@ form button{
 }
 
 .selllerRow{
-     min-height: 100vh; 
+    min-height: calc(100vh - 70px);
+    // height: 86vh;
+    // max-height: 100vh;
 }
 
 .card {
