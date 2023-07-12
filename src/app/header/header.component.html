@@ -1,8 +1,13 @@
 <nav class="nav">
   <h3><a routerLink="/">Organic Health</a></h3>
   <div class="nav-search" *ngIf="menuType === 'default'">
-    <input type="search" />
-    <button class="">Search</button>
+    <input #searchInput type="text" (keyup)="search($event)" (blur)="hiddenSearch()"/>
+    <button (click)="submit(searchInput.value)">Search</button>
+    <ul class="ulSearchList">
+      <li *ngFor="let searchItems of searchedProducts">
+        <a>{{searchItems.name}}</a>
+      </li>
+    </ul>
   </div>
   <div [ngSwitch]="menuType">
     <div>

@@ -4,47 +4,48 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h3 class="signUpHeading">Add Product</h3>
-                    <form #addproduct="ngForm" (ngSubmit)="addProducts(addproduct.value)">
-                        <h6 class="signUpHeading">{{addProductSuccessfully}}</h6>
+                    <h3 class="signUpHeading">Update Product</h3>
+                    <h3 class="signUpHeading">{{productMessage}}</h3>
+                    <form #updateProduct="ngForm" (ngSubmit)='update(updateProduct.value)'>
+                        <!-- <h6 class="signUpHeading">{{addProductSuccessfully}}</h6> -->
                         <div class="form-group">
                             <!-- <label for="exampleInputEmail1">Name</label> -->
                             <input type="text" class="form-control" id="name" aria-describedby="name" name="name"
-                                ngModel placeholder="Enter Product Name">  
+                                ngModel="{{productData?.name}}" placeholder="Enter Product Name">  
                         </div>
 
                         <div class="form-group">
                             <!-- <label for="exampleInputEmail1">Email address</label> -->
                             <input type="text" class="form-control" id="price" aria-describedby="price"
-                                name="price" ngModel placeholder="Enter Product Price">
+                                name="price" ngModel="{{productData?.price}}" placeholder="Enter Product Price">
                         </div>
 
                         <div class="form-group">
                             <!-- <label for="exampleInputPassword1">Password</label> -->
                             <input type="text" class="form-control" id="color" placeholder="Enter Product color"
-                                name="color" ngModel>
+                                name="color" ngModel="{{productData?.color}}">
                         </div>
                         
                         <div class="form-group">
                             <!-- <label for="exampleInputPassword1">Password</label> -->
                             <input type="text" class="form-control" id="category" placeholder="Enter Product Category"
-                                name="category" ngModel>
+                                name="category" ngModel="{{productData?.category}}">
                         </div>
 
                         <div class="form-group">
                             <!-- <label for="exampleInputPassword1">Password</label> -->
                             <input type="text" class="form-control" id="description" placeholder="Enter Product Description"
-                                name="description" ngModel>
+                                name="description" ngModel="{{productData?.description}}">
                         </div>
 
                         <div class="form-group">
                             <!-- <label for="exampleInputPassword1">Password</label> -->
                             <input type="text" class="form-control" id="image" placeholder="Enter Product Url"
-                                name="image" ngModel>
+                                name="image" ngModel="{{productData?.image}}">
                         </div>
 
                         <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-success">Submit</button>
+                            <button type="submit" class="btn btn-success">Update</button>
                         </div>
                         
                     </form>

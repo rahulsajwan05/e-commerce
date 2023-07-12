@@ -1,0 +1,35 @@
+.image-header{
+    // object-fit: contain;
+    height: 600px;
+    width: 100%;
+}
+
+.card-body{
+    min-height: 12rem;
+}
+
+.card-fotter {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.cartAnchor{
+    margin-right: 5px;
+}
+
+.detailAnchor{
+    margin-left: 5px;
+}
+
+.card-img-top{
+    height: 200px !important;
+}
+
+.card-text{
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

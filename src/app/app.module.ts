@@ -10,6 +10,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './seller/seller-home/seller-home.component';
 import { SellerAddProductComponent } from './seller/seller-add-product/seller-add-product.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SellerProductUpdateComponent } from './seller/seller-product-update/seller-product-update.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { SearchedProductComponent } from './search/searched-product/searched-product.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 @NgModule({
@@ -19,13 +24,18 @@ import { SellerAddProductComponent } from './seller/seller-add-product/seller-ad
     HomeComponent,
     SellerAuthComponent,
     SellerHomeComponent,
-    SellerAddProductComponent
+    SellerAddProductComponent,
+    SellerProductUpdateComponent,
+    SearchedProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule,
+    NgbModule
     
   ],
   providers: [],
