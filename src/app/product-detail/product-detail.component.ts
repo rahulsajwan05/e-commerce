@@ -11,6 +11,7 @@ import { AadProductService } from 'src/assets/services/product-service/aad-produ
 export class ProductDetailComponent implements OnInit{
   
   productData: undefined|addProduct;
+  productQuantity: number =1;
   constructor(private _activateRouter:ActivatedRoute, private _router:Router, private _productService: AadProductService){
 
   }
@@ -21,6 +22,15 @@ export class ProductDetailComponent implements OnInit{
       console.warn(result);
       this.productData=result;
     })
+  }
+
+  handleQuantity(val:string){
+
+      if(this.productQuantity<20 && val==='max'){
+        this.productQuantity+=1;
+      } else if(this.productQuantity>1 && val==='min'){
+        this.productQuantity-=1;
+      }
   }
 
 }

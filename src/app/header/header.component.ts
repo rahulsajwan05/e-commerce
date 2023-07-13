@@ -58,6 +58,9 @@ export class HeaderComponent implements OnInit {
     this._router.navigate([`search/${val}`]);
   }
 
+  redirectToDetail(id:number){
+    this._router.navigate(['/details/'+id]);
+  }
   logout(){
     localStorage.removeItem('seller')
     this._router.navigate(['/']);

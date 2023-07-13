@@ -5,7 +5,7 @@
     <button (click)="submit(searchInput.value)">Search</button>
     <ul class="ulSearchList">
       <li *ngFor="let searchItems of searchedProducts">
-        <a>{{searchItems.name}}</a>
+        <a (mousedown)="redirectToDetail(searchItems.id)">{{searchItems.name}}</a>
       </li>
     </ul>
   </div>
@@ -14,7 +14,7 @@
       <ul *ngSwitchCase="'default'">
         <li><a routerLink="">Home</a></li>
         <li><a routerLink="seller-auth">Seller</a></li>
-        <li><a href="Login">Login</a></li>
+        <li><a routerLink="user-auth">Login/Sign Up</a></li>
         <li><a href="Cart">Cart</a></li>
       </ul>
     </div>

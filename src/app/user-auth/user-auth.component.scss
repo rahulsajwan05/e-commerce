@@ -1,0 +1,31 @@
+.signUpHeading , .loginHeading{
+    text-align: center;
+}
+
+.form-group {
+    margin: 20px;
+}
+
+input {
+    border-radius: 12px;
+}
+
+form button{
+    color: rebeccapurple;
+}
+
+.selllerRow{
+    min-height: calc(100vh - 70px);
+    // height: 86vh;
+    // max-height: 100vh;
+}
+
+.card {
+    border-radius: 25px;
+    background: #c0edc0;
+    box-shadow: 0px 0px 15px 2px #60a183;
+}
+
+button{
+    color: aliceblue !important;
+}

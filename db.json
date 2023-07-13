@@ -80,5 +80,13 @@
       "image": "https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6.jpg",
       "id": 6
     }
+  ],
+  "users": [
+    {
+      "name": "rahul",
+      "email": "rahul@gmail.com",
+      "password": "abc@123",
+      "id": 1
+    }
   ]
 }

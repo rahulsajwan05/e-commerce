@@ -35,9 +35,7 @@
         <div class="col-12 col-sm-12 col-md-6 col-lg-6">
             <div class="detailHeading mb-2">
                 <div class="">
-                    <h5 class="card-title text-start">Lenovo 23.8 inch Full HD VA Panel 3-Side Near Edgeless with TUV
-                        Eye Care Monitor (D24-20)
-                        (Response Time: 4 ms, 75 Hz Refresh Rate)</h5>
+                    <h5 class="card-title text-start">{{productData.name}}</h5>
                 </div>
                 <div class="secondCol">
                     <a class="text-bold">2,035 Ratings & 260 Reviews</a>
@@ -112,11 +110,11 @@
                 </div>
                 
             </div>
-            <!-- <div class="quantity">
-                    <button>-</button>
-                    <input type="text" value="1">
-                    <button>+</button>
-                </div> -->
+            <div class="quantity mt-2">
+                    <button (click)="handleQuantity('min')">-</button>
+                    <input type="text" value={{productQuantity}}>
+                    <button (click)="handleQuantity('max')">+</button>
+                </div>
         </div>
     </div>
 </div>
