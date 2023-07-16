@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   menuType:string='default';
   sellerName:string='';
   searchedProducts:undefined | addProduct[];
+  userName:string='';
   constructor(private _router:Router , private _productService:AadProductService){
 
   }
@@ -20,13 +21,18 @@ export class HeaderComponent implements OnInit {
     this._router.events.subscribe((val:any) =>{
       if(val.url){
         if(localStorage.getItem('seller') && val.url.includes('seller')){
-          this.menuType="seller";
-          if(localStorage.getItem('seller')){
+         
+       
             let sellerStore=localStorage.getItem('seller');
             let sellerData=sellerStore && JSON.parse(sellerStore)[0];
             // console.warn(sellerData.name);
             this.sellerName=sellerData.name;
-          }
+            this.menuType="seller"; 
+        } else if(localStorage.getItem('user')){
+          let userStore=localStorage.getItem('user');
+          let userData= userStore && JSON.parse(userStore);
+          this.userName=userData.name;
+          this.menuType="user";
         } else {
           this.menuType="default";
         }
@@ -63,6 +69,11 @@ export class HeaderComponent implements OnInit {
   }
   logout(){
     localStorage.removeItem('seller')
+    this._router.navigate(['/']);
+  }
+
+  userLogout(){
+    localStorage.removeItem('user')
     this._router.navigate(['/']);
   }
 }

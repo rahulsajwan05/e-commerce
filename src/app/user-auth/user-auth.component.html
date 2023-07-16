@@ -1,7 +1,7 @@
 
 
 <div class="container">
-    <div  class="row d-flex align-items-center justify-content-center selllerRow">
+    <div  *ngIf="this.showSignUp" class="row d-flex align-items-center justify-content-center selllerRow">
         <div class="col-12 col-sm-12 col-md-8 col-lg-8">
             <div class="card">
                 <div class="card-body">
@@ -32,6 +32,40 @@
                         
                         <div class="col-md-12 text-center">
                             <a (click)="showLoginButton()">Already have an account ? Click here</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="this.showLogin" class="row d-flex align-items-center justify-content-center selllerRow">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="card">
+                <div class="card-body">
+
+                    <h3 class="signUpHeading">Login form</h3>
+                    <form #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
+                        <p>{{authError}}</p>
+                        <div class="form-group">
+                            <!-- <label for="exampleInputEmail1">Email address</label> -->
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                name="email" ngModel placeholder="Enter email">
+                        </div>
+
+                        <div class="form-group">
+                            <!-- <label for="exampleInputPassword1">Password</label> -->
+                            <input type="password" class="form-control" id="passoword" placeholder="Enter Password"
+                                name="password" ngModel>
+                        </div>
+
+                        <div class="col-md-12 text-center">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                        
+                        <div class="col-md-12 text-center">
+                            <a (click)="showSignUpButton()">Don't have an account ? Click here</a>
                         </div>
 
                     </form>

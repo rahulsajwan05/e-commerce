@@ -23,6 +23,18 @@
       "email": "Tanuj@gmail.com",
       "password": "abc@123",
       "id": 4
+    },
+    {
+      "name": "check",
+      "email": "check@gmail.com",
+      "password": "abc22",
+      "id": 5
+    },
+    {
+      "name": "user",
+      "email": "use@gmail.com",
+      "password": "useras",
+      "id": 6
     }
   ],
   "products": [
@@ -87,6 +99,36 @@
       "email": "rahul@gmail.com",
       "password": "abc@123",
       "id": 1
+    },
+    {
+      "name": "peter",
+      "email": "peter@test.com",
+      "password": "abc@123",
+      "id": 2
+    },
+    {
+      "name": "tony",
+      "email": "tony@gmail.com",
+      "password": "abc@123",
+      "id": 3
+    },
+    {
+      "name": "test",
+      "email": "test@gmail.com",
+      "password": "abc@123",
+      "id": 4
+    },
+    {
+      "name": "hcekc",
+      "email": "check@gmail.com",
+      "password": "abc@123",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 6
     }
   ]
 }
