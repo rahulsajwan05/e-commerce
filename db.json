@@ -123,12 +123,54 @@
       "email": "check@gmail.com",
       "password": "abc@123",
       "id": 5
+    }
+  ],
+  "cart": [
+    {
+      "name": "Test 2",
+      "price": "2",
+      "color": "black",
+      "category": "Test 5",
+      "description": "This page contains a bunch of HTML Elements and text. You can copy the source code and use it test out various CSS Properties. For testing purposes, you may use internal styles. Recall that these CSS rules are placed in between the head tags using the following format:",
+      "image": "https://images.unsplash.com/photo-1612441804231-77a36b284856?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW91bnRhaW4lMjBsYW5kc2NhcGV8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 2,
+      "id": 2
     },
     {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": 6
+      "name": "Test",
+      "price": "2000",
+      "color": "Blue",
+      "category": "Test",
+      "description": "This page contains a bunch of HTML Elements and text. You can copy the source code and use it test out various CSS Properties. For testing purposes, you may use internal styles. Recall that these CSS rules are placed in between the head tags using the following format:",
+      "image": "https://iso.500px.com/wp-content/uploads/2022/07/Sunset-somewhere-in-Iowa-By-Vath.-Sok-2.jpeg",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 1,
+      "id": 4
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "This page contains a bunch of HTML Elements and text. You can copy the source code and use it test out various CSS Properties. For testing purposes, you may use internal styles. Recall that these CSS rules are placed in between the head tags using the following format:",
+      "image": "https://cdn.naturettl.com/wp-content/uploads/2017/02/22014001/top-tips-improve-landscapes-ross-hoddinott-11-900x601.jpg",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 3,
+      "id": 5
+    }
+  ],
+  "orders": [
+    {
+      "email": "test@gmail.com",
+      "address": "abc123",
+      "contact": "9779901900",
+      "totalPrice": 54102,
+      "userId": 1,
+      "id": 1
     }
   ]
 }

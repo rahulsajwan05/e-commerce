@@ -7,7 +7,8 @@
 
             <div class="row mt-3">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <button class="btn btn-primary detailsCartBuyBtn"> Add to Cart</button>
+                    <button class="btn btn-primary detailsCartBuyBtn" *ngIf="!this.removeCart" (click)="addToCart()"> Add to Cart</button>
+                    <button class="btn btn-primary detailsCartBuyBtn" *ngIf="this.removeCart" (click)="removeToCart(productData.id)"> Remove to Cart</button>
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                     <button class="btn btn-primary detailsCartBuyBtn"> Buy Now</button>

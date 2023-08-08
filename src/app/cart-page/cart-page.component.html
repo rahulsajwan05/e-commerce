@@ -1,0 +1,55 @@
+<div class="container pt-3">
+
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+
+            <div class="card mt-1" *ngFor="let items of cartData">
+                <div class="container">
+                    <div class="row mt-3 mb-3">
+                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                            <div class="card">
+                                <div class="p-2">
+                                    <img class="card-img-top"
+                                        src="{{items.image}}"
+                                        alt="Card image cap" width="15rem" height="180rem">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>{{items.name}}</h4>
+                                    <p><span>Price :</span> <span>{{items.price}}</span></p>
+                                    <p><span>Quantity :</span> <span>{{items.quantity}}</span></p>
+                                    <a>Remove to cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
+
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+
+            <div class="card">
+                <div class="card-body">
+                    <h1>Summary</h1>
+                    <ul>
+                        <li><span>Amount : </span> <span>{{priceSummary.price}}</span></li>
+                        <li><span>Tax : </span> <span>{{priceSummary.tax}}</span></li>
+                        <li><span>Delivery : </span> <span>{{priceSummary.delivery}}</span></li>
+                        <li><span>Discount : </span> <span>{{priceSummary.discount}}</span></li>
+                    </ul>
+                    <h4>Total : {{priceSummary.total}}</h4>
+                    <button class="btn btn-primary w-100" (click)="checkOut()"> checkout</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

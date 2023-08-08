@@ -26,7 +26,7 @@ export class UserService {
     this._http.get<signUp[]>(url,{observe:'response'}).subscribe((result)=>{
       if(result && result.body?.length){
         this.invalidUserAuth.emit(false)
-        localStorage.setItem("user",JSON.stringify(result.body));
+        localStorage.setItem("user",JSON.stringify(result.body[0]));
         this._router.navigate(['/']);
       } else {
         this.invalidUserAuth.emit(true)
