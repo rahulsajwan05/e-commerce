@@ -1,6 +1,6 @@
 <nav class="nav">
   <h3><a routerLink="/">Organic Health</a></h3>
-  <div class="nav-search" *ngIf="menuType === 'default'">
+  <div class="nav-search" *ngIf="menuType === 'default' || menuType === 'user'">
     <input #searchInput type="text" (keyup)="search($event)" (blur)="hiddenSearch()"/>
     <button (click)="submit(searchInput.value)">Search</button>
     <ul class="ulSearchList">
@@ -23,7 +23,8 @@
         <li><a routerLink="seller-auth">Seller</a></li>
         <li><a routerLink="user-auth">{{this.userName}}</a></li>
         <li><a (click)="userLogout()">Logout</a></li>
-        <li><a routerLink="cart-page">Cart({{cartItems}})</a></li>
+        <li><a routerLink="my-order">Orders</a></li>
+        <li><a [routerLink]="cartItems>0?'cart-page':null">Cart({{cartItems}})</a></li>
       </ul>
       <ul *ngSwitchCase="'seller'">
         <li><a routerLink="seller-home">Product List</a></li>

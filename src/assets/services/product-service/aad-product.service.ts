@@ -108,4 +108,18 @@ export class AadProductService {
     let userId= user && JSON.parse(user).id;
     return this._http.get<order[]>('http://localhost:3000/orders?userId='+userId);
   }
+
+  deleteCartItems(cartId:number){
+    return this._http.delete("http://localhost:3000/cart/"+cartId,{observe:'response'}).subscribe((result)=>{
+      if(result){
+        this.cartData.emit([])
+      }
+    });
 }
+
+
+cancelOrder(orderId:number){
+  return this._http.delete("http://localhost:3000/orders/"+orderId)
+}
+
+} 

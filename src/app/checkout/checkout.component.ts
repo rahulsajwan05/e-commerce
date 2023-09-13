@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { cart } from 'src/assets/interfaces/add-product';
 import { order } from 'src/assets/interfaces/order';
 import { AadProductService } from 'src/assets/services/product-service/aad-product.service';
 
@@ -11,12 +12,14 @@ import { AadProductService } from 'src/assets/services/product-service/aad-produ
 export class CheckoutComponent implements OnInit {
   
   totalPrice:number| undefined;
+  cartData:cart[]|undefined;
   constructor(private _productService:AadProductService , private _router:Router){
 
   }
   ngOnInit(): void {
     this._productService.currentCart().subscribe((result)=>{
       let price= 0;
+      this.cartData=result;
       result.forEach((items)=>{
        if(items.quantity){
          price = price + (+items.price * +items.quantity)
@@ -43,10 +46,16 @@ export class CheckoutComponent implements OnInit {
         id:undefined
       }
 
+      this.cartData?.forEach((item)=>{
+        setTimeout(() => {
+         item.id && this._productService.deleteCartItems(item.id)
+        }, 600);
+
+      })
       this._productService.orderNow(orderData).subscribe((result)=>{
         if(result){
-          alert("order placed")
-          this._router.navigate(["/my-orders"])
+          alert("Order has been placed")
+          this._router.navigate(["my-order"])
 
         }
       })

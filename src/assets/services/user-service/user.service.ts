@@ -22,6 +22,8 @@ export class UserService {
   }
 
   userLogin(user:sellerLogin){
+    console.warn(user);
+    
     var url='http://localhost:3000/users?email='+user.email+'&password='+user.password;
     this._http.get<signUp[]>(url,{observe:'response'}).subscribe((result)=>{
       if(result && result.body?.length){

@@ -22,7 +22,7 @@
                                     <h4>{{items.name}}</h4>
                                     <p><span>Price :</span> <span>{{items.price}}</span></p>
                                     <p><span>Quantity :</span> <span>{{items.quantity}}</span></p>
-                                    <a>Remove to cart</a>
+                                    <a (click)="removeToCart(items.id)">Remove to cart</a>
                                 </div>
                             </div>
                         </div>
