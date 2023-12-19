@@ -38,7 +38,7 @@ export class AadProductService {
   }
 
   trendyProducts(){
-    return this._http.get<addProduct[]>("http://localhost:3000/products?_limit=6");
+    return this._http.get<addProduct[]>("http://localhost:3000/products");
   }
 
   searchProduct(query:string){

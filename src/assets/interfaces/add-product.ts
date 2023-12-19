@@ -1,6 +1,6 @@
 export interface addProduct{
     name:string,
-    price:Number,
+    price:string,
     color:string,
     category:string,
     description:string,
@@ -12,7 +12,7 @@ export interface addProduct{
 
 export interface cart {
     name:string,
-    price:Number,
+    price:string,
     color:string,
     category:string,
     description:string,
