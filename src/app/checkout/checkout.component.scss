@@ -1,3 +1,22 @@
 .form-group{
     margin-top: 0.5rem;
 }
+
+.imageSize{
+    width: 250px;
+}   
+
+.checkoutHeight{
+    min-height: calc(100vh - 70px);
+}
+
+.card {
+    border-radius: 15px;
+}
+
+.formCss{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

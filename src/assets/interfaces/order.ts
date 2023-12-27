@@ -4,6 +4,8 @@ export interface order{
     contact:string,
     userId:number,
     totalPrice:number,
-    id:number|undefined
-    
+    id:number|undefined,
+    PurchaseNameFirstName: string
+    PurchaseNameLastName:string,
+    pincode:string
 }

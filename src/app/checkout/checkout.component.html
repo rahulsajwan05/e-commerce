@@ -1,45 +1,77 @@
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-            <div class="card">
-                <div class="card-body">
+<div class="backColor">
+    <div class="container">
+        <div class="row checkoutHeight">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 mt-5">
+                <div class="">
+                    <div class="card-body">
 
-                    <h3 class="signUpHeading">Sign-Up form</h3>
-                    <form #checkOutForm="ngForm" (ngSubmit)="orderNow(checkOutForm.value)">
-                    
-                        <div class="form-group">
-                            <!-- <label for="exampleInputEmail1">Email address</label> -->
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                name="email" ngModel placeholder="Email">
-                        </div>
+                        <h2 class="signUpHeading text-center">Order</h2>
+                        <form #checkOutForm="ngForm" (ngSubmit)="orderNow(checkOutForm.value)">
 
-                        <div class="form-group">
-                            <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input type="text" class="form-control" id="address" placeholder=" address" name="address"
-                                ngModel>
-                        </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <!-- <label for="exampleInputEmail1">Email address</label> -->
+                                        <input type="name" class="form-control" id="name" aria-describedby="name"
+                                            name="name" ngModel placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <!-- <label for="exampleInputEmail1">Email address</label> -->
+                                        <input type="lastName" class="form-control" id="lastName"
+                                            aria-describedby="emailHelp" name="lastName" ngModel
+                                            placeholder="Last Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <!-- <label for="exampleInputPassword1">Password</label> -->
+                                        <input type="text" class="form-control" id="contact" placeholder="Mobile Number"
+                                            name="contact" ngModel>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <!-- <label for="exampleInputEmail1">Email address</label> -->
+                                        <input type="pinCode" class="form-control" id="pinCode"
+                                            aria-describedby="pinCode" name="pinCode" ngModel placeholder="Pin Code">
+                                    </div>
+                                </div>
+                            </div>
+                    <div class="form-group">
+                        <!-- <label for="exampleInputEmail1">Email address</label> -->
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+                            ngModel placeholder="Email">
+                    </div>
 
-                        <div class="form-group">
-                            <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input type="text" class="form-control" id="contact" placeholder="Mobile Number"
-                                name="contact" ngModel>
-                        </div>
+                    <div class="form-group">
+                        <!-- <label for="exampleInputPassword1">Password</label> -->
+                        <input type="text" class="form-control" id="address" placeholder=" address" name="address"
+                            ngModel>
+                    </div>
 
-                        <div class="col-md-12 text-center mt-2">
-                            <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
+                    <div class="col-md-12 text-center mt-2">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
                     </form>
                 </div>
             </div>
         </div>
 
-        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 mt-5">
             <div class="card">
                 <div class="card-body">
-                    <h3>Total Amount : <span>{{totalPrice}}</span></h3>
+                    <img src="../../assets/images/Lovepik_com-450098515-An ecommerce concept of order confirm flat illustration.png"
+                        class="imageSize" />
                     <h5>Payment Mode : <span> Pay On Delivery</span></h5>
+                    <h3>Total Amount : <span>{{totalPrice}}</span></h3>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 </div>

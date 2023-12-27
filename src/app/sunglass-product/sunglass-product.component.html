@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-12 col-sm-4 col-md-3 col-lg-4 col-xl-4 mb-3  mt-5">
+    <h1>New Launched Products</h1>
+    <h1>Limited Edition</h1>
+  </div>
+
+  <div class="col-12 col-sm-8 col-md-9 col-lg-8 col-xl-8 mb-3">
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide *ngFor="let sunglass of sunGlassProduct">
+        <div class="borderProduct mt-3">
+          <img class="card-img-top" src="{{sunglass.image}}" alt="Card image cap">
+          <!-- <p>{{sunglass.price}}</p> -->
+          <h6 class="card-title text-center">{{sunglass.name}}</h6>
+          <p class="card-text">{{sunglass.description}}</p>
+          <p>{{sunglass.price| currency:'INR':'symbol' }} </p>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
+</div>
+
+
+<!-- <div class="row">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-3"  *ngFor="let sunglass of sunGlassProduct">
+    <div class="card" >
+      <img class="card-img-top" src="{{sunglass.image}}" alt="Card image cap">
+      <div class="card-body">
+        <h6 class="card-title text-center">{{sunglass.name}}</h6>
+        <p class="card-text">{{sunglass.description}}</p>
+        <p>{{sunglass.price| currency:'INR':'symbol' }} </p>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="row ">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 mb-3">
+    <div class="column">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+          <h2>Column 1</h2>
+          <p>Some text..</p>
+        </div>
+      </div>
+    </div>
+    <div class="column1">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let sunglass of sunGlassProduct">
+          <div class="card mt-3">
+            <img class="card-img-top" src="{{sunglass.image}}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{sunglass.name}}</h5>
+              <p class="card-text">{{sunglass.description}}</p>
+              <p>{{sunglass.price| currency:'INR':'symbol' }} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div> -->
+
+<!-- <div class="col-6" *ngFor="let sunglass of sunGlassProduct">
+    <div class="card mt-3">
+      <img class="card-img-top" src="{{sunglass.image}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{sunglass.name}}</h5>
+        <p class="card-text">{{sunglass.description}}</p>
+        <p>{{sunglass.price| currency:'INR':'symbol' }} </p>
+      </div>
+    </div>
+  </div> -->

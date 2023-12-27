@@ -1,0 +1,23 @@
+.card-body{
+    height: 9rem;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 0px;
+    // height: 294px; /* Should be removed. Only for demonstration */
+  }
+  
+  .column1{
+    float: right;
+    width: 70%;
+    padding: 0px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  

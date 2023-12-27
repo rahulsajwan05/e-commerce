@@ -33,7 +33,7 @@ export class CheckoutComponent implements OnInit {
      })
   }
   
-  orderNow(data:{email:string,address:string,contact:string}){
+  orderNow(data:{email:string,address:string,contact:string,PurchaseNameFirstName:string,PurchaseNameLastName:string,pincode:string}){
     console.warn(data);
     let user = localStorage.getItem('user');
     let userid = user && JSON.parse(user).id;
@@ -41,9 +41,9 @@ export class CheckoutComponent implements OnInit {
     if(this.totalPrice){
       let orderData:order={
         ...data,
-        totalPrice:this.totalPrice,
-        userId:userid,
-        id:undefined
+        totalPrice: this.totalPrice,
+        userId: userid,
+        id: undefined,
       }
 
       this.cartData?.forEach((item)=>{

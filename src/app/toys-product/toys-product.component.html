@@ -1,0 +1,13 @@
+<!-- <div class="container"> -->
+<owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide *ngFor="let toys of toysProduct">
+        <div class="borderProduct">
+      <img class="card-img-top" src="{{toys.image}}" alt="Card image cap" (click)="fetchToy(toys.id)">
+      <!-- <p>{{toys.price}}</p> -->
+      <h6 class="card-title text-center">{{toys.name}}</h6>
+      <p class="card-text">{{toys.description}}</p>
+      <p>{{toys.price| currency:'INR':'symbol' }} </p>
+    </div>
+    </ng-template>
+  </owl-carousel-o>
+  <!-- </div> -->

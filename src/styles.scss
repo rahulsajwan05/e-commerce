@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import '~@fortawesome/fontawesome-free/css/all.css';
 body {
     background-color: #f2f3f7 !important; /* fallback for old browsers */
 // background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
@@ -8,13 +11,91 @@ body {
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
-.carousel-caption {
-    background-color: #0000006e;
-    border-radius: 25px;
+// .carousel-caption {
+//     background-color: #0000006e;
+//     border-radius: 25px;
+// }
+
+
+// .carousel-control-prev-icon, .carousel-control-next-icon {
+//     background-color: black;
+//     border: 5px;
+// }
+
+// * {
+//   box-sizing: border-box;
+// }
+
+.card-img-top{
+  height: 150px !important;
+  border-radius: 15px 15px 0px 0px;
+  // width: 200px !important;
 }
 
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next{
+    height: 30px !important;
+    width: 30px !important;
+    border-radius: 50% !important;
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.125);
+  }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: black;
-    border: 5px;
+  .owl-carousel .owl-nav .owl-prev{
+    left: 0;
+    transform: translate(-20px, -35px);
+  }
+
+  .owl-carousel .owl-nav .owl-next{
+    right: 0;
+    transform: translate(20px, -35px);
+  }
+
+  .borderProduct {
+    // background: chartreuse;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 20px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -100px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    // border: solid;
+    border-radius: 15px;
+    padding: 0.5rem;
+    background-color: #f2f3f7;
+  
+    p {
+      text-align: center;
+    }
+  }
+
+  .deals{
+
+    // background-image: url("../src/assets/tina-dawson-Kim9COAIEGc-unsplash.jpg");
+    background-color: #cccccc; 
+  //   background: hsla(228, 17%, 53%, 1);
+  
+  // background: linear-gradient(135deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+  
+  // background: -moz-linear-gradient(135deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+  
+  // background: -webkit-linear-gradient(135deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+  
+  // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#727a9a", endColorstr="#d8dbe9", GradientType=1 );
+  }
+  
+
+  // .owl-theme .owl-nav{
+  //   font-size: 29px !important;
+  //   margin: 4px !important;
+  //   padding: 0px 0px;
+  // }
+  
+html, body { height: 100%; 
+             width: 100%;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+      padding: 0;
+     }
+
+.backColor{
+  background: #20002c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #cbb4d4, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #cbb4d4, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }

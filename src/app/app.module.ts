@@ -22,6 +22,15 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { TestComponent } from './test/test.component';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ToysProductComponent } from './toys-product/toys-product.component';
+import { SunglassProductComponent } from './sunglass-product/sunglass-product.component';
+import { FooterComponent } from './footer/footer.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { ToysListComponent } from './toys-list/toys-list.component';
+import { ToyProductDetailComponent } from './toy-product-detail/toy-product-detail.component';
+
 
 
 @NgModule({
@@ -39,18 +48,25 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CartPageComponent,
     CheckoutComponent,
     MyOrdersComponent,
-    TestComponent
+    TestComponent,
+    ToysProductComponent,
+    SunglassProductComponent,
+    FooterComponent,
+    SideNavComponent,
+    ToysListComponent,
+    ToyProductDetailComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     FontAwesomeModule,
     NgbModule,
     CommonModule,
-    BrowserAnimationsModule
- 
+    CarouselModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

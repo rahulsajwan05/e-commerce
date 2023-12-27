@@ -4,6 +4,11 @@
     width: 100%;
 }
 
+.cardss{
+  // margin-right: 24px;
+  background-color: #99f;
+}
+
 .card-body{
   height: 9rem;
     // min-height: 5rem;
@@ -29,9 +34,7 @@
     // margin-left: 5px;
 }
 
-.card-img-top{
-    height: 200px !important;
-}
+
 
 .card-text{
     overflow: hidden;
@@ -46,7 +49,42 @@
   justify-content: space-between;
 }
 
+.owl-prev{
+  border-radius: 20px !important;
+    width: 30px !important;
+}
 
+.container {
+
+  .owl-next{
+    background-color: #f99;
+  }
+  .owl-prev{
+    background-color: #99f;
+  }
+}
+
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-dot {
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 50% !important;
+}
+
+.deals{
+  // background: hsla(228, 17%, 53%, 1);
+
+// background: linear-gradient(135deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+
+// background: -moz-linear-gradient(135deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+
+// background: -webkit-linear-gradient(135deg, hsla(228, 17%, 53%, 1) 0%, hsla(229, 28%, 88%, 1) 100%);
+
+// filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#727a9a", endColorstr="#d8dbe9", GradientType=1 );
+background: #20002c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #cbb4d4, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #cbb4d4, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 
 @keyframes tonext {
     75% {

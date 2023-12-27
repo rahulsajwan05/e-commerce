@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { addProduct, cart } from 'src/assets/interfaces/add-product';
+import { banner } from 'src/assets/interfaces/banner';
 import { order } from 'src/assets/interfaces/order';
 
 @Injectable({
@@ -8,51 +9,76 @@ import { order } from 'src/assets/interfaces/order';
 })
 export class AadProductService {
 
-  cartData =new EventEmitter<addProduct[]| []>()
+  cartData = new EventEmitter<addProduct[] | []>()
+  cartDataLocal = new EventEmitter<cart[] | []>()
+  cartDatas = new EventEmitter<cart[] | []>()
   constructor(private _http: HttpClient) { }
 
-  addproduct(data:addProduct){
+  addproduct(data: addProduct) {
     console.log(data)
-    return this._http.post("http://localhost:3000/products",data)
+    return this._http.post("http://localhost:3000/products", data)
   }
 
-  getAllProducts(){
+  getAllProducts() {
     return this._http.get<addProduct[]>("http://localhost:3000/products")
   }
 
-  deleteProduct(id:number){
+  deleteProduct(id: number) {
     return this._http.delete(`http://localhost:3000/products/${id}`);
   }
 
-  getProduct(id:string){
+  getProduct(id: string) {
     return this._http.get<addProduct>(`http://localhost:3000/products/${id}`);
   }
 
-  updateProduct(data:addProduct){
-   console.log(data)
-    return this._http.put<addProduct>(`http://localhost:3000/products/${data.id}`,data)
+
+  updateProduct(data: addProduct) {
+    console.log(data)
+    return this._http.put<addProduct>(`http://localhost:3000/products/${data.id}`, data)
   }
 
-  popularProducts(){
+  popularProducts() {
     return this._http.get<addProduct[]>("http://localhost:3000/products?_limit=3");
   }
 
-  trendyProducts(){
-    return this._http.get<addProduct[]>("http://localhost:3000/products");
+  trendyProducts() {
+    return this._http.get<addProduct[]>("http://localhost:3000/products?_limit=10");
   }
 
-  searchProduct(query:string){
+  toyProductsLimit() {
+    return this._http.get<addProduct[]>("http://localhost:3000/toysProducts?_limit=10");
+  }
+
+  toyProducts() {
+    return this._http.get<addProduct[]>("http://localhost:3000/toysProducts");
+  }
+
+  getToyProduct(id: number) {
+    return this._http.get<addProduct>(`http://localhost:3000/toysProducts/${id}`);
+  }
+
+
+  glassesProducts() {
+    return this._http.get<addProduct[]>("http://localhost:3000/glassesProducts");
+  }
+
+  glassesProductsLimit() {
+    return this._http.get<addProduct[]>("http://localhost:3000/glassesProducts?_limit=8");
+  }
+
+
+  searchProduct(query: string) {
     return this._http.get<addProduct[]>(`http://localhost:3000/products?q=${query}`);
   }
 
-  localAddToCart(data:addProduct){
-    let cartData=[];
-    let localCart=localStorage.getItem('localCart');
-    if(!localCart){
+  localAddToCart(data: addProduct) {
+    let cartData = [];
+    let localCart = localStorage.getItem('localCart');
+    if (!localCart) {
       localStorage.setItem("localCart", JSON.stringify([data]));
       this.cartData.emit([data]);
-    }else {
-      cartData=JSON.parse(localCart);
+    } else {
+      cartData = JSON.parse(localCart);
       cartData.push(data);
       localStorage.setItem("localCart", JSON.stringify(cartData));
       this.cartData.emit(cartData);
@@ -60,66 +86,99 @@ export class AadProductService {
 
   }
 
-  removeTolocalCart(productId:number){
-    let cartData=localStorage.getItem('localCart');
-    
-    if(cartData){
-      let items= JSON.parse(cartData)
+  getLocalCartData() {
+    // let localCart=JSON.parse(localStorage.getItem('localCart')!);
+    // console.warn(localCart);
+
+    // return localCart;
+    // if(!localCart){
+    //   let localCarts = localStorage.getItem('localCart');
+    //    return let localCartData=localCarts && JSON.parse(localCarts);
+    // }
+  }
+
+  removeTolocalCart(productId: number) {
+    let cartData = localStorage.getItem('localCart');
+
+    if (cartData) {
+      let items = JSON.parse(cartData)
       console.warn(items);
       items = items.filter((item: addProduct) => productId !== item.id);
       console.warn(items);
       localStorage.setItem("localCart", JSON.stringify(items));
       this.cartData.emit(items);
-     }
-
+    }
   }
 
-  addToCart(cartData:cart){
-    return this._http.post("http://localhost:3000/cart",cartData);
+  addToCart(cartData: cart) {
+    return this._http.post("http://localhost:3000/cart", cartData);
   }
 
-  getCartList(userId:number){
-    return this._http.get<addProduct[]>('http://localhost:3000/cart?userId='+userId,
-    {observe:'response'})
-    .subscribe((result)=>{
-      if(result && result.body){
+  getCartList(userId: number) {
+    return this._http.get<addProduct[]>('http://localhost:3000/cart?userId=' + userId,
+      { observe: 'response' })
+      .subscribe((result) => {
         console.warn(result);
         
-        this.cartData.emit(result.body);
-      }
-    });
+        if (result && result.body) {
+          this.cartData.emit(result.body);
+        }
+      });
   }
 
-  removeToCart(cartId:number){
-    return this._http.delete("http://localhost:3000/cart/"+cartId);
+  removeToCart(cartId: number) {
+    // this.cartDataLocal.emit(items);
+    return this._http.delete("http://localhost:3000/cart/" + cartId);
+
   }
 
-  currentCart(){
+  currentCart() {
     let user = localStorage.getItem('user');
-    let userId= user && JSON.parse(user).id;
-    return this._http.get<cart[]>('http://localhost:3000/cart?userId='+userId);
+    let userId = user && JSON.parse(user).id;
+    return this._http.get<cart[]>('http://localhost:3000/cart?userId=' + userId);
   }
 
-  orderNow(data:order){
-    return this._http.post('http://localhost:3000/orders',data)
+  removeToLocalCurrentCart(cartId: number) {
+    let cartDatas = localStorage.getItem('localCart');
+    if (cartDatas) {
+      let items = JSON.parse(cartDatas)
+      console.warn(items);
+      items = items.filter((item: cart) => cartId !== item.id);
+      console.warn(items);
+      localStorage.setItem("localCart", JSON.stringify(items));
+      this.cartDataLocal.emit(items);
+    }
+
+    // this._productService.cartData.subscribe((items)=>{
+    //   console.warn("working header cart");
+    // this.cartData=items;
+    // });
   }
-  orderList(){
+
+  orderNow(data: order) {
+    return this._http.post('http://localhost:3000/orders', data)
+  }
+  orderList() {
     let user = localStorage.getItem('user');
-    let userId= user && JSON.parse(user).id;
-    return this._http.get<order[]>('http://localhost:3000/orders?userId='+userId);
+    let userId = user && JSON.parse(user).id;
+    return this._http.get<order[]>('http://localhost:3000/orders?userId=' + userId);
   }
 
-  deleteCartItems(cartId:number){
-    return this._http.delete("http://localhost:3000/cart/"+cartId,{observe:'response'}).subscribe((result)=>{
-      if(result){
+  deleteCartItems(cartId: number) {
+    return this._http.delete("http://localhost:3000/cart/" + cartId, { observe: 'response' }).subscribe((result) => {
+      if (result) {
         this.cartData.emit([])
       }
     });
-}
+  }
 
 
-cancelOrder(orderId:number){
-  return this._http.delete("http://localhost:3000/orders/"+orderId)
-}
+  cancelOrder(orderId: number) {
+    return this._http.delete("http://localhost:3000/orders/" + orderId)
+  }
+
+  getBanner(){
+    return this._http.get<banner[]>("http://localhost:3000/bannerProducts")
+  }
 
 } 

@@ -13,6 +13,9 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { TestComponent } from './test/test.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { ToysListComponent } from './toys-list/toys-list.component';
+import { ToyProductDetailComponent } from './toy-product-detail/toy-product-detail.component';
 
 const routes: Routes = [ 
   { path:"",component:HomeComponent},
@@ -27,6 +30,9 @@ const routes: Routes = [
   {path:"checkout",component:CheckoutComponent},
   {path:"my-order",component:MyOrdersComponent},
   {path:"test",component:TestComponent},
+  {path:"side",component:SideNavComponent},
+  {path:"toysProduct",component:ToysListComponent},
+  {path:"detail/:productToyId",component:ToyProductDetailComponent},
 ];
 
 @NgModule({

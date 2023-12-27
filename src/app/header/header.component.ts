@@ -49,21 +49,38 @@ export class HeaderComponent implements OnInit {
     console.warn(this.cartItems);
     
     this._productService.cartData.subscribe((items)=>{
+      // console.warn("working header");
+      this.cartItems=items.length;
+    });
+
+    this._productService.cartDataLocal.subscribe((items)=>{
+      // console.warn("working header");
+      this.cartItems=items.length;
+    });
+
+    this._productService.cartDatas.subscribe((items)=>{
+      console.warn(items);
+      
+      console.warn("working header new");
       this.cartItems=items.length;
     });
   }
 
   search(query:KeyboardEvent){
+    console.warn(query);
+    
     if(query){
       const element= query.target as HTMLInputElement
+      console.warn(element.value);
+      
      this._productService.searchProduct(element.value).subscribe((data)=>{
       if(data){
-        // console.warn(data);
+        console.warn(data);
         if(data.length>3){
-          data.length=3;
+          data.length=4;
         }
         this.searchedProducts=data;
-        // console.warn(this.searchedProducts);
+        console.warn(this.searchedProducts);
       }
      })
     }

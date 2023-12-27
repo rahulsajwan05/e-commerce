@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SellerAddProductComponent } from '../seller/seller-add-product/seller-add-product.component';
 import { AadProductService } from 'src/assets/services/product-service/aad-product.service';
 import { addProduct } from 'src/assets/interfaces/add-product';
-// import { OwlOptions } from 'ngx-owl-carousel-o';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Router } from '@angular/router';
+import { banner } from 'src/assets/interfaces/banner';
+
+// declare let $: any;
 
 @Component({
   selector: 'app-home',
@@ -12,8 +16,15 @@ import { addProduct } from 'src/assets/interfaces/add-product';
 export class HomeComponent implements OnInit{
   popularProducts: undefined | addProduct[];
   trendyProducts: undefined | addProduct[];
-
-  constructor(private _productService: AadProductService){
+  banner: undefined | banner[];
+  toy : undefined | addProduct;
+  // bamerArray=[
+  //   {
+  //     id:1,
+  //     image:''
+  //   }
+  // ]
+  constructor(private _productService: AadProductService, private _router:Router){
 
   }
   ngOnInit(): void {
@@ -25,40 +36,55 @@ export class HomeComponent implements OnInit{
     this._productService.trendyProducts().subscribe((data )=>{
       this.trendyProducts=data;
     });
+    
+    this._productService.getBanner().subscribe((data )=>{
+      this.banner=data;
+    });
   }
 
-  // customOptions: OwlOptions = {
-  //   loop: true,
-  //   mouseDrag: false,
-  //   touchDrag: false,
-  //   pullDrag: false,
-  //   dots: false,
-  //   navSpeed: 700,
-  //   navText: ['', ''],
-  //   responsive: {
-  //     0: {
-  //       items: 1
-  //     },
-  //     400: {
-  //       items: 2
-  //     },
-  //     740: {
-  //       items: 3
-  //     },
-  //     940: {
-  //       items: 4
-  //     }
-  //   },
-  //   nav: true
+  // viewToy(id:number){
+  //   console.log("working")
+  //   this._productService.getToyProduct(id).subscribe((res)=>{
+  //     this.toy=res;
+  //     console.log(this.toy);
+  //   })
+    
   // }
-  
-  //   slides = [
-  //     {id: 1, img: "https://dummyimage.com/350x150/423b42/fff"},
-  //     {id: 2, img: "https://dummyimage.com/350x150/2a2b7a/fff"},
-  //     {id: 3, img: "https://dummyimage.com/350x150/1a2b7a/fff"},
-  //     {id: 4, img: "https://dummyimage.com/350x150/7a2b7a/fff"},
-  //     {id: 5, img: "https://dummyimage.com/350x150/9a2b7a/fff"},
-  //     {id: 6, img: "https://dummyimage.com/350x150/5a2b7a/fff"},
-  //     {id: 6, img: "https://dummyimage.com/350x150/4a2b7a/fff"}
-    // ]; 
+
+  viewAllToys(){
+    this._router.navigate(['toysProduct']);
+  }
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    margin: 20,
+    navText: ['&#8249', '&#8250;'],
+    nav: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      300: {
+        items:2
+      },
+      400: {
+        items: 2
+      },
+      540:{
+        items:3
+      },
+      740: {
+        items: 4
+      },
+      940: {
+        items: 6
+      },
+    }
+  }
+
 }

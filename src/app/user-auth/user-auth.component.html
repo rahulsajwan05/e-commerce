@@ -1,77 +1,91 @@
-
-
-<div class="container">
-    <div  *ngIf="this.showSignUp" class="row d-flex align-items-center justify-content-center selllerRow">
-        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-            <div class="card">
-                <div class="card-body">
-
-                    <h3 class="signUpHeading">Sign-Up form</h3>
-                    <form #userForm="ngForm" (ngSubmit)="signUp(userForm.value)">
-                        <div class="form-group">
-                            <!-- <label for="exampleInputEmail1">Name</label> -->
-                            <input type="text" class="form-control" id="name" aria-describedby="name" name="name"
-                                ngModel placeholder="Enter Name">  
+<div class="backColor">
+    <div class="container">
+        <div *ngIf="this.showSignUp" class="row d-flex align-items-center justify-content-center selllerRow">
+            <div class="col-10">
+                <div class="card">
+                    <div class="row">
+                        <h2 class="signUpHeading">Sign Up</h2>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                            <img src="../../assets/—Pngtree—shopping cart shopping bag 3d_5353472.png" alt="cart"
+                                class="imageSize" />
                         </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <!-- <div class="card">
+                            <div class="card-body"> -->
 
-                        <div class="form-group">
-                            <!-- <label for="exampleInputEmail1">Email address</label> -->
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                name="email" ngModel placeholder="Enter email">
-                        </div>
 
-                        <div class="form-group">
-                            <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input type="password" class="form-control" id="passoword" placeholder="Enter Password"
-                                name="password" ngModel>
-                        </div>
+                            <form #userForm="ngForm" (ngSubmit)="signUp(userForm.value)">
+                                <div class="form-group">
+                                    <!-- <label for="exampleInputEmail1">Name</label> -->
+                                    <input type="text" class="form-control" id="name" aria-describedby="name"
+                                        name="name" ngModel placeholder="Enter Name">
+                                </div>
 
-                        <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                        
-                        <div class="col-md-12 text-center">
-                            <a (click)="showLoginButton()">Already have an account ? Click here</a>
-                        </div>
+                                <div class="form-group">
+                                    <!-- <label for="exampleInputEmail1">Email address</label> -->
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                        name="email" ngModel placeholder="Enter email">
+                                </div>
 
-                    </form>
+                                <div class="form-group">
+                                    <!-- <label for="exampleInputPassword1">Password</label> -->
+                                    <input type="password" class="form-control" id="passoword"
+                                        placeholder="Enter Password" name="password" ngModel>
+                                </div>
+
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+
+                                <div class="col-md-12 text-center mt-4">
+                                    <a (click)="showLoginButton()">Already have an account ? Click here</a>
+                                </div>
+
+                            </form>
+                            <!-- </div>
+                        </div> -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div *ngIf="this.showLogin" class="row d-flex align-items-center justify-content-center selllerRow">
-        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-            <div class="card">
-                <div class="card-body">
-
-                    <h3 class="signUpHeading">Login form</h3>
-                    <form #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
-                        <p>{{authError}}</p>
-                        <div class="form-group">
-                            <!-- <label for="exampleInputEmail1">Email address</label> -->
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
-                                name="email" ngModel placeholder="Enter email">
+        <div *ngIf="this.showLogin" class="row d-flex align-items-center justify-content-center selllerRow">
+            <div class="col-10">
+                <div class="card">
+                    <div class="row">
+                        <h2 class="signUpHeading">Login</h2>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+                            <img src="../../assets/—Pngtree—shopping cart shopping bag 3d_5353472.png" alt="cart"
+                                class="imageSize" />
                         </div>
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <form #userLogin="ngForm" (ngSubmit)="login(userLogin.value)">
+                                <p>{{authError}}</p>
+                                <div class="form-group">
+                                    <!-- <label for="exampleInputEmail1">Email address</label> -->
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                        name="email" ngModel placeholder="Enter email">
+                                </div>
 
-                        <div class="form-group">
-                            <!-- <label for="exampleInputPassword1">Password</label> -->
-                            <input type="password" class="form-control" id="passoword" placeholder="Enter Password"
-                                name="password" ngModel>
-                        </div>
+                                <div class="form-group">
+                                    <!-- <label for="exampleInputPassword1">Password</label> -->
+                                    <input type="password" class="form-control" id="passoword"
+                                        placeholder="Enter Password" name="password" ngModel>
+                                </div>
 
-                        <div class="col-md-12 text-center">
-                            <button type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                        
-                        <div class="col-md-12 text-center">
-                            <a (click)="showSignUpButton()">Don't have an account ? Click here</a>
-                        </div>
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
 
-                    </form>
+                                <div class="col-md-12 text-center mt-4">
+                                    <a (click)="showSignUpButton()">Don't have an account ? Click here</a>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-    </div>
-
-</div>

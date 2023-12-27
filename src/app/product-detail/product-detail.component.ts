@@ -69,6 +69,8 @@ export class ProductDetailComponent implements OnInit{
 
   addToCart(){
     if(this.productData){
+      console.warn(this.productData);
+      
       this.productData.quantity= this.productQuantity;
       if(!localStorage.getItem('user')){
         this._productService.localAddToCart(this.productData);
@@ -88,6 +90,8 @@ export class ProductDetailComponent implements OnInit{
         delete cartData.id;
         this._productService.addToCart(cartData).subscribe((result)=>{
           if(result){
+            console.warn(result);
+            
             this._productService.getCartList(userId);
             this.removeCart=true;
           }
@@ -103,11 +107,19 @@ export class ProductDetailComponent implements OnInit{
     } else {
       console.warn(this.cartData);
       this.cartData && this._productService.removeToCart(this.cartData.id).subscribe((result)=>{
-         let user = localStorage.getItem('user');
-        let userId= user && JSON.parse(user).id;
-        this._productService.getCartList(userId);
+        console.warn(result);
+        
+        if(result){
+          let user = localStorage.getItem('user');
+         let userId= user && JSON.parse(user).id;
+         this._productService.getCartList(userId);
+        }
       });
     }
     this.removeCart=false;
+  }
+
+  viewAllToys(){
+    this._router.navigate(['toysProduct']);
   }
 }

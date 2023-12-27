@@ -45,7 +45,7 @@ export class UserAuthComponent implements OnInit {
 
   showSignUpButton(){
     this.showSignUp=true;
-    this.showLogin=true
+    this.showLogin=false
   }
 
   localCartToRemoteCart(){

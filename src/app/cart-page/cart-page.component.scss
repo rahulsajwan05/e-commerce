@@ -1,3 +1,29 @@
-.card{
-    min-height: 12rem;
+.card-img-top{
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 20px 20px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -100px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    // // border: solid;
+    // border-radius: 10px;
+    // padding: 0.5rem;
+    // background-color: #f2f3f7;
+}
+
+// span{
+//     margin-right: 15px;
+// }
+
+.summaryCart{
+ background-color: rgb(81 102 112 / 29%);
+}
+
+.imageSize{
+    width: 290px;
+    // margin-top: -30px;
+}
+
+.items{
+    -webkit-box-shadow: 0px 10px 14px 1px rgba(196, 202, 208, 0.4901960784);
+    -moz-box-shadow: 0px 10px 14px 1px rgba(196, 202, 208, 0.4901960784);
+         box-shadow: 0px 10px 14px 1px rgba(196, 202, 208, 0.4901960784);// border: solid;
+    border-radius: 15px;
+    padding: 0.5rem;
+    background-color: #f2f3f7;
 }

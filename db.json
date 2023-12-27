@@ -44,7 +44,7 @@
       "color": "Blue",
       "category": "Test",
       "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD ",
-      "image": "https://iso.500px.com/wp-content/uploads/2022/07/Sunset-somewhere-in-Iowa-By-Vath.-Sok-2.jpeg",
+      "image": "https://freepngimg.com/thumb/dress%20shirt/4-black-dress-shirt-png-image.png",
       "id": 1
     },
     {
@@ -53,7 +53,7 @@
       "color": "black",
       "category": "Test 5",
       "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
-      "image": "https://images.unsplash.com/photo-1612441804231-77a36b284856?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bW91bnRhaW4lMjBsYW5kc2NhcGV8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+      "image": "https://freepngimg.com/thumb/dress%20shirt/8-blue-dress-shirt-png-image.png",
       "id": 2
     },
     {
@@ -62,7 +62,7 @@
       "color": "black",
       "category": "Mobile",
       "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
-      "image": "https://cdn.naturettl.com/wp-content/uploads/2017/02/22014001/top-tips-improve-landscapes-ross-hoddinott-11-900x601.jpg",
+      "image": "https://freepngimg.com/thumb/dress%20shirt/6-dress-shirt-png-image.png",
       "id": 3
     },
     {
@@ -71,7 +71,7 @@
       "color": "black",
       "category": "Mobile",
       "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
-      "image": "https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6.jpg",
+      "image": "https://freepngimg.com/thumb/dress%20shirt/3-dress-shirt-png-image.png",
       "id": 4
     },
     {
@@ -80,7 +80,7 @@
       "color": "black",
       "category": "Mobile",
       "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
-      "image": "https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6.jpg",
+      "image": "https://freepngimg.com/thumb/dress%20shirt/1-blue-dress-shirt-png-image.png",
       "id": 5
     },
     {
@@ -89,7 +89,7 @@
       "color": "black",
       "category": "Mobile",
       "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
-      "image": "https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6.jpg",
+      "image": "https://freepngimg.com/thumb/dress%20shirt/7-dress-shirt-png-image.png",
       "id": 6
     },
     {
@@ -98,8 +98,219 @@
       "color": "black",
       "category": "Mobile",
       "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
-      "image": "https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6.jpg",
+      "image": "https://freepngimg.com/thumb/dress%20shirt/32-dress-shirt-png-image.png",
       "id": 7
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/dress/31618-6-dress-photo.png",
+      "id": 8
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/dress/31470-4-dress-transparent-image.png",
+      "id": 9
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/dress/31444-3-dress-hd.png",
+      "id": 10
+    }
+  ],
+  "toysProducts": [
+    {
+      "name": "Test",
+      "price": "2000",
+      "color": "Blue",
+      "category": "Test",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD ",
+      "image": "https://freepngimg.com/thumb/toy/33903-2-plush-toy-transparent-image.png",
+      "id": 1
+    },
+    {
+      "name": "Test 2",
+      "price": "2",
+      "color": "black",
+      "category": "Test 5",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/33568-4-toy-image.png",
+      "id": 2
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/33908-7-plush-toy-file.png",
+      "id": 3
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/33523-9-wooden-toy-image.png",
+      "id": 4
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/33610-4-plush-toy-hd.png",
+      "id": 5
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/33454-6-plush-toy.png",
+      "id": 6
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/59377-toy-beyblade:-metal-spinning-youtube-fusion-tops.png",
+      "id": 7
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/134509-minifigure-lego-png-download-free.png",
+      "id": 8
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/123476-plush-hd-image-free.png",
+      "id": 9
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/136520-doll-hat-barbie-free-download-image.png",
+      "id": 10
+    }
+  ],
+  "glassesProducts": [
+    {
+      "name": "Test",
+      "price": "2000",
+      "color": "Blue",
+      "category": "Test",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD ",
+      "image": "https://freepngimg.com/thumb/sunglasses/2-2-sunglasses-picture.png",
+      "id": 1
+    },
+    {
+      "name": "Test 2",
+      "price": "2",
+      "color": "black",
+      "category": "Test 5",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/sunglasses/10-2-sunglasses-png-pic.png",
+      "id": 2
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/sunglasses/4-2-sunglasses-png-clipart.png",
+      "id": 3
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/sunglasses/6-2-sunglasses-png.png",
+      "id": 4
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/sunglasses/7-2-sunglasses-free-download-png.png",
+      "id": 5
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/sunglasses/11-2-sunglasses-png-hd.png",
+      "id": 6
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/sunglasses/9-2-sunglasses-download-png.png",
+      "id": 7
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/sunglasses/5-2-sunglasses-free-png-image.png",
+      "id": 8
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/toy/123476-plush-hd-image-free.png",
+      "id": 9
+    },
+    {
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
+      "image": "https://freepngimg.com/thumb/sunglasses/12-2-sunglasses-png-picture.png",
+      "id": 10
     }
   ],
   "users": [
@@ -136,26 +347,80 @@
   ],
   "cart": [
     {
-      "name": "Test",
-      "price": "2000",
-      "color": "Blue",
-      "category": "Test",
+      "name": "Iphone 10",
+      "price": "52000",
+      "color": "black",
+      "category": "Mobile",
       "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD",
-      "image": "https://iso.500px.com/wp-content/uploads/2022/07/Sunset-somewhere-in-Iowa-By-Vath.-Sok-2.jpeg",
-      "quantity": 1,
+      "image": "https://freepngimg.com/thumb/dress%20shirt/7-dress-shirt-png-image.png",
+      "quantity": 3,
       "userId": 1,
-      "productId": 1,
-      "id": 1
+      "productId": 6,
+      "id": 7
     }
   ],
   "orders": [
     {
-      "email": "rahulsajwan05@gmail.com",
-      "address": "sangrur",
+      "name": "rahul",
+      "lastName": "sajwan",
       "contact": "9779902190",
-      "totalPrice": 54100,
+      "pinCode": "110001",
+      "email": "rahul@seller.com",
+      "address": "shastri bhawna",
+      "totalPrice": 52100,
       "userId": 1,
       "id": 1
+    },
+    {
+      "name": "rahul",
+      "lastName": "sajwan",
+      "contact": "9779902190",
+      "pinCode": "110001",
+      "email": "rahul@seller.com",
+      "address": "shastri bhawna",
+      "totalPrice": 52100,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "rahul",
+      "lastName": "sajwan",
+      "contact": "9779902190",
+      "pinCode": "110001",
+      "email": "rahul@seller.com",
+      "address": "shastri bhawna",
+      "totalPrice": 52100,
+      "userId": 1,
+      "id": 3
+    }
+  ],
+  "bannerProducts": [
+    {
+      "name": "Axis",
+      "price": "2000",
+      "color": "Blue",
+      "category": "Test",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD ",
+      "image": "https://offercdn.paytm.com/blog/2021/08/hd-3487-web.png",
+      "id": 1
+    },
+    {
+      "name": "Test",
+      "price": "2000",
+      "color": "Blue",
+      "category": "Test",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD ",
+      "image": "https://offercdn.paytm.com/blog/2021/08/hd-3487-web.png",
+      "id": 2
+    },
+    {
+      "name": "Test",
+      "price": "2000",
+      "color": "Blue",
+      "category": "Test",
+      "description": "intel i-5 core 4 , 16 GB RAM , 512 SSD ",
+      "image": "https://offercdn.paytm.com/blog/2021/08/hd-3487-web.png",
+      "id": 3
     }
   ]
 }
