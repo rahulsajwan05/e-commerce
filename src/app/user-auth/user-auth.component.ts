@@ -30,6 +30,7 @@ export class UserAuthComponent implements OnInit {
   login(data:sellerLogin){
     this._userSignUpService.userLogin(data)
     this._userSignUpService.invalidUserAuth.subscribe((result)=>{
+      console.log(result)
       if(result){
         this.authError="Invalid email and password";
       }else {
