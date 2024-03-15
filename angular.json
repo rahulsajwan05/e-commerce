@@ -103,7 +103,8 @@
             ],
             "scripts": [
 
-            ]
+            ],
+            "karmaConfig": "karma.conf.js"
           }
         }
       }
