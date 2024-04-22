@@ -16,7 +16,7 @@ export class SellerAddProductComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
 
   onFormSubmit(addproduct: NgForm) {

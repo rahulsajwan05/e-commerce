@@ -15,7 +15,7 @@ export class SellerService {
   constructor(private _http:HttpClient, private _router:Router) { }
 
   userSignUp(data:signUp){
-    return this._http.post("http://localhost:3000/seller",
+    return this._http.post("https://ecom-data-snzm.onrender.com/seller",
     data,
     {observe:'response'}).subscribe( (result => {
       this.isSellerLoggedIn.next(true);
@@ -34,7 +34,7 @@ export class SellerService {
   userLogin(data:sellerLogin){
     // console.log(data.email);
     var password=data.password
-    var url='http://localhost:3000/seller?email='+data.email+'&password='+password;
+    var url='https://ecom-data-snzm.onrender.com/seller?email='+data.email+'&password='+password;
     console.log(url);
     this._http.get(url,
     {observe:'response'}).subscribe( (result:any) => {

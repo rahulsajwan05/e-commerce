@@ -16,59 +16,59 @@ export class AadProductService {
 
   addproduct(data: addProduct) {
     console.log(data)
-    return this._http.post("http://localhost:3000/products", data)
+    return this._http.post("https://ecom-data-snzm.onrender.com/products", data)
   }
 
   getAllProducts() {
-    return this._http.get<addProduct[]>("http://localhost:3000/products")
+    return this._http.get<addProduct[]>("https://ecom-data-snzm.onrender.com/products")
   }
 
   deleteProduct(id: number) {
-    return this._http.delete(`http://localhost:3000/products/${id}`);
+    return this._http.delete(`https://ecom-data-snzm.onrender.com/products/${id}`);
   }
 
   getProduct(id: string) {
-    return this._http.get<addProduct>(`http://localhost:3000/products/${id}`);
+    return this._http.get<addProduct>(`https://ecom-data-snzm.onrender.com/products/${id}`);
   }
 
 
   updateProduct(data: addProduct) {
     console.log(data)
-    return this._http.put<addProduct>(`http://localhost:3000/products/${data.id}`, data)
+    return this._http.put<addProduct>(`https://ecom-data-snzm.onrender.com/products/${data.id}`, data)
   }
 
   popularProducts() {
-    return this._http.get<addProduct[]>("http://localhost:3000/products?_limit=3");
+    return this._http.get<addProduct[]>("https://ecom-data-snzm.onrender.com/products?_limit=3");
   }
 
   trendyProducts() {
-    return this._http.get<addProduct[]>("http://localhost:3000/products?_limit=10");
+    return this._http.get<addProduct[]>("https://ecom-data-snzm.onrender.com/products?_limit=10");
   }
 
   toyProductsLimit() {
-    return this._http.get<addProduct[]>("http://localhost:3000/toysProducts?_limit=10");
+    return this._http.get<addProduct[]>("https://ecom-data-snzm.onrender.com/toysProducts?_limit=10");
   }
 
   toyProducts() {
-    return this._http.get<addProduct[]>("http://localhost:3000/toysProducts");
+    return this._http.get<addProduct[]>("https://ecom-data-snzm.onrender.com/toysProducts");
   }
 
   getToyProduct(id: number) {
-    return this._http.get<addProduct>(`http://localhost:3000/toysProducts/${id}`);
+    return this._http.get<addProduct>(`https://ecom-data-snzm.onrender.com/toysProducts/${id}`);
   }
 
 
   glassesProducts() {
-    return this._http.get<addProduct[]>("http://localhost:3000/glassesProducts");
+    return this._http.get<addProduct[]>("https://ecom-data-snzm.onrender.com/glassesProducts");
   }
 
   glassesProductsLimit() {
-    return this._http.get<addProduct[]>("http://localhost:3000/glassesProducts?_limit=8");
+    return this._http.get<addProduct[]>("https://ecom-data-snzm.onrender.com/glassesProducts?_limit=8");
   }
 
 
   searchProduct(query: string) {
-    return this._http.get<addProduct[]>(`http://localhost:3000/products?q=${query}`);
+    return this._http.get<addProduct[]>(`https://ecom-data-snzm.onrender.com/products?q=${query}`);
   }
 
   localAddToCart(data: addProduct) {
@@ -111,11 +111,11 @@ export class AadProductService {
   }
 
   addToCart(cartData: cart) {
-    return this._http.post("http://localhost:3000/cart", cartData);
+    return this._http.post("https://ecom-data-snzm.onrender.com/cart", cartData);
   }
 
   getCartList(userId: number) {
-    return this._http.get<addProduct[]>('http://localhost:3000/cart?userId=' + userId,
+    return this._http.get<addProduct[]>('https://ecom-data-snzm.onrender.com/cart?userId=' + userId,
       { observe: 'response' })
       .subscribe((result) => {
         console.warn(result);
@@ -128,14 +128,14 @@ export class AadProductService {
 
   removeToCart(cartId: number) {
     // this.cartDataLocal.emit(items);
-    return this._http.delete("http://localhost:3000/cart/" + cartId);
+    return this._http.delete("https://ecom-data-snzm.onrender.com/cart/" + cartId);
 
   }
 
   currentCart() {
     let user = localStorage.getItem('user');
     let userId = user && JSON.parse(user).id;
-    return this._http.get<cart[]>('http://localhost:3000/cart?userId=' + userId);
+    return this._http.get<cart[]>('https://ecom-data-snzm.onrender.com/cart?userId=' + userId);
   }
 
   removeToLocalCurrentCart(cartId: number) {
@@ -156,16 +156,16 @@ export class AadProductService {
   }
 
   orderNow(data: order) {
-    return this._http.post('http://localhost:3000/orders', data)
+    return this._http.post('https://ecom-data-snzm.onrender.com/orders', data)
   }
   orderList() {
     let user = localStorage.getItem('user');
     let userId = user && JSON.parse(user).id;
-    return this._http.get<order[]>('http://localhost:3000/orders?userId=' + userId);
+    return this._http.get<order[]>('https://ecom-data-snzm.onrender.com/orders?userId=' + userId);
   }
 
   deleteCartItems(cartId: number) {
-    return this._http.delete("http://localhost:3000/cart/" + cartId, { observe: 'response' }).subscribe((result) => {
+    return this._http.delete("https://ecom-data-snzm.onrender.com/cart/" + cartId, { observe: 'response' }).subscribe((result) => {
       if (result) {
         this.cartData.emit([])
       }
@@ -174,11 +174,11 @@ export class AadProductService {
 
 
   cancelOrder(orderId: number) {
-    return this._http.delete("http://localhost:3000/orders/" + orderId)
+    return this._http.delete("https://ecom-data-snzm.onrender.com/orders/" + orderId)
   }
 
   getBanner(){
-    return this._http.get<banner[]>("http://localhost:3000/bannerProducts")
+    return this._http.get<banner[]>("https://ecom-data-snzm.onrender.com/bannerProducts")
   }
 
 } 

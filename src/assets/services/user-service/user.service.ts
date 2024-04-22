@@ -12,7 +12,7 @@ export class UserService {
   constructor(private _http: HttpClient , private _router:Router) { }
 
   userSignUp(user:signUp){
-    this._http.post("http://localhost:3000/users",user,{observe:'response'})
+    this._http.post("https://ecom-data-snzm.onrender.com/users",user,{observe:'response'})
     .subscribe((result)=>{
       if(result && result.body){
         localStorage.setItem("user",JSON.stringify(result.body));
@@ -24,7 +24,7 @@ export class UserService {
   userLogin(user:sellerLogin){
     console.warn(user);
     
-    var url='http://localhost:3000/users?email='+user.email+'&password='+user.password;
+    var url='https://ecom-data-snzm.onrender.com/users?email='+user.email+'&password='+user.password;
     this._http.get<signUp[]>(url,{observe:'response'}).subscribe((result)=>{
       if(result && result.body?.length){
         this.invalidUserAuth.emit(false)
